@@ -1,28 +1,29 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faTachometerAlt,  // Dashboard
-  faHistory,        // History
-  faCalendar,       // Calendar
+  BiCategory,  // Dashboard
+  BiSolidCalendar,       // Calendar
   BiCalendarPlus,  // Appointments
-  faChartBar,       // Statistics
-  faTools,          // Tools
-  faComments,       // Chat
-  faHeadset,        // Support
+  BiChart,       // Statistics         
+  BiMessageRoundedDots,       // Chat
+  BiPhone,        // Support
 } from "react-icons/bi";
 
+import { IoSettings } from "react-icons/io5";
+import { MdHistory } from "react-icons/md";
+
+
 export const general = [
-  { name: "Dashboard", path: "#" ,icon: faTachometerAlt },
-  { name: "History", path: "#",  icon: faHistory },
-  { name: "Calendar", path: "#",icon: faCalendar },
-  { name: "Appointments", path: "#",  icon: BiCalendarPlus },
-  { name: "Statistics", path: "#",  icon: faChartBar  },
+  { name: "Dashboard", path: "#" ,icon: BiCategory },
+  { name: "History", path: "#",  icon: MdHistory },
+  { name: "Calendar", path: "#", icon: BiSolidCalendar },
+  { name: "Appointments", path: "#", icon: BiCalendarPlus },
+  { name: "Statistics", path: "#", icon: BiChart },
 ];
 
 export const tools = [
-  { name: "Chat", path: "#",  icon: faComments },
-  { name: "Support", path: "#" , icon: faHeadset  },
+  { name: "Chat", path: "#",  icon: BiMessageRoundedDots },
+  { name: "Support", path: "#" , icon: BiPhone },
 ];
 
 export const setting = {
-     name: "Setting", path: "#", icon: faTools 
+     name: "Setting", path: "#", icon: IoSettings 
      };
