@@ -4,29 +4,28 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export const CalendarView = () => {
   return (
-    <div className="p-6 bg-white rounded-md">
-      <div className="flex justify-between items-center mb-6">
+    <div className="mb-4">
+      <div className="flex justify-between items-center mb-6 px-5">
         <h2 className="text-xl font-bold text-blue-900">{calendarData.month}</h2>
         <div className="flex space-x-2 text-blue-900">
           <FaArrowLeft className="cursor-pointer" />
           <FaArrowRight className="cursor-pointer" />
         </div>
       </div>
-      <div className="grid grid-cols-7 gap-2 text-center">
+      <div className={"grid grid-cols-7 gap-2 text-center text-blue-900"}>
         {calendarData.week.map((day, i) => (
-          <div key={i} className="bg-gray-100 p-2 rounded-md">
-            <div className={`font-bold ${day.highlight ? 'bg-blue-100 rounded-full py-1' : ''}`}>
-              {day.day} {day.date}
+          <div key={i} className="p-2 rounded-md">
+            <div className={`font-bold ${day.isToday ? 'bg-blue-100 text-blue-900 rounded-lg' : ''}`}>
+              {day.day}<br />{day.date}
             </div>
-            <div className="mt-2 space-y-1">
+            <div className={`mt-2 space-y-1 ${day.isToday ? 'bg-blue-100 text-blue-900 rounded-lg' : ''}`}>
               {day.times.map((time, j) => (
                 <div
                   key={j}
-                  className={`text-xs rounded-full px-2 py-1 w-fit mx-auto ${
-                    day.highlight === time
+                  className={`rounded-full px-2 py-1 w-fit mx-auto ${day.highlight === time
                       ? 'bg-blue-900 text-white font-semibold'
-                      : 'text-gray-600'
-                  }`}
+                      : 'text-blue-900'
+                    }`}
                 >
                   {time}
                 </div>
@@ -35,15 +34,15 @@ export const CalendarView = () => {
           </div>
         ))}
       </div>
-      <div className="mt-6 flex space-x-4">
+      <div className="mt-6 flex gap-2 ">
         {calendarData.appointments.map((appt, i) => (
-          <div key={i} className="bg-indigo-100 p-4 rounded-xl flex-1">
+          <div key={i} className={`px-5 py-4 rounded-2xl ${appt.isToday ? 'bg-blue-900 text-white' : 'bg-blue-100 text-blue-900'}`}>
             <div className="flex justify-between items-center mb-2">
-              <h3 className="text-blue-900 font-bold">{appt.title}</h3>
-              <span className="text-xl">{appt.icon}</span>
+              <h3 className=" font-bold">{appt.title}</h3>
+              <img src={appt.icon} alt="icon" className='w-10 h-10 mx-4'/>
             </div>
-            <p className="text-sm text-gray-700">{appt.time}</p>
-            <p className="text-sm text-gray-600">{appt.doctor}</p>
+            <p >{appt.time}</p>
+            <p >{appt.doctor}</p>
           </div>
         ))}
       </div>
