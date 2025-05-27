@@ -12,10 +12,10 @@ export const DashboardMainContent = () => {
       <div className="lg:pl-64 flex flex-col w-full">
         <Header />
         <div className="flex flex-col lg:flex-row gap-6 px-6 mt-6">
-<div className="w-full lg:w-1/2 flex flex-col gap-6">
-  <AnatomySection />
-  <ActivityFeed />
-</div>
+          <div className="w-full lg:w-1/2 flex flex-col gap-6">
+            <AnatomySection />
+            <ActivityFeed />
+          </div>
           <div className="w-full lg:w-1/2 bg-gray-100 p-6 rounded-2xl shadow">
             <CalendarView />
             <UpcomingSchedule />

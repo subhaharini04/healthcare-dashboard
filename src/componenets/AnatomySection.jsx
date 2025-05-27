@@ -10,12 +10,12 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 export const AnatomySection = () => {
     return (
         <div>
-            <div className='flex justify-between items-center mx-10'>
+            <div className='flex flex-col sm:flex-row justify-between items-center mx-10'>
                 <h1 className='text-blue-900 text-2xl font-bold'>Dashboard</h1>
                 <p className='text-blue-900 font-bold'>This Week 
                     <RiArrowDropDownLine className='inline w-10 h-10'/></p>
             </div>
-            <div className='flex'>
+            <div className='flex flex-col lg:flex-row'>
                 <div className=''>
                     <div className='relative w-2/3 ml-[50px] bg-gray-100 rounded-md'>
                         <img src={body} alt="human body" className='max-w-full h-auto' />
@@ -35,7 +35,7 @@ export const AnatomySection = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-1/3'>
+                <div className='w-auto lg:w-1/3'>
                     <HealthSectionCards />
                 </div>
             </div>
