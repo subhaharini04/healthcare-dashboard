@@ -1,12 +1,47 @@
-# React + Vite
+# 🩺 Healthcare Dashboard – Web Developer Assignment (FitPeo Tech)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a responsive **Healthcare Dashboard** built as part of the assignment for the **Web Developer position** at **FitPeo Tech Pvt. Ltd.** It includes features like an anatomical view, activity graph, calendar, upcoming appointments, and a sidebar layout.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🌐 [View Deployed Project on Vercel](https://healthcare-dashboard-subhaharinis-projects.vercel.app/)  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📌 Features
+
+✅ Responsive Dashboard Layout  
+✅ Fixed Sidebar with Navigation Links  
+✅ Searchable Header with Notifications  
+✅ Anatomical View with Interactive Labels  
+✅ Health Status Cards (Lungs, Teeth, Bone)  
+✅ Weekly Activity Bar Graph (Static CSS Representation)  
+✅ Calendar View with Appointment Indicators  
+✅ Upcoming Schedule Section with Cards  
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** (with Vite)
+- **Tailwind CSS**
+- **React Icons**
+- **Deployed on Vercel**
+
+---
+
+## 🧩 How to Run Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/subhaharini04/healthcare-dashboard.git
+cd fitpeo-healthcare-dashboard
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
